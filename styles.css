@@ -71,6 +71,7 @@ body {
 
 .events ul {
   list-style: none;
+  text-align: left;
 }
 
 .landing,
