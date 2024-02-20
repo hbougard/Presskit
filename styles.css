@@ -66,13 +66,14 @@ body {
 .events {
   display: flex;
   justify-content: space-between;
-  text-align: left;
+  text-align: left; /* Alinear texto a la izquierda en las columnas */
+  flex-direction: column; /* Mostrar las columnas una encima de la otra en dispositivos móviles */
 }
 
 .events ul,
 .events li {
-  list-style: none;
-  text-align: left;
+  list-style:circle;
+  text-align: left; /* Alinear texto a la izquierda en las columnas */
   padding: 0px;
 }
 
