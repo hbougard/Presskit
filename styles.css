@@ -69,10 +69,11 @@ body {
   text-align: left;
 }
 
-.events ul {
+.events ul,
+.events li {
   list-style: none;
   text-align: left;
-  padding: 0%;
+  padding: 0px;
 }
 
 .landing,
