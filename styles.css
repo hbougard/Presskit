@@ -3,8 +3,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Cinzel', serif, sans-serif; /* Added a fallback font */
-  overflow-x: hidden; /* Prevenir el desplazamiento horizontal */
+  font-family: 'Cinzel', serif, sans-serif; /* Fuente con respaldo */
+  overflow-x: hidden; /* Prevenir desplazamiento horizontal */
 }
 
 .background {
@@ -25,21 +25,22 @@ body {
   flex-direction: column;
   align-items: center; /* Centrar horizontalmente */
   justify-content: center; /* Centrar verticalmente */
-  padding: 20px; /* Añadir relleno */
+  padding: 10px; /* Reducir el relleno */
   text-align: center; /* Centrar texto */
 }
 
 .ticker-container {
   width: 90%;
-  max-width: 500px; /* Limitar el ancho para pantallas más pequeñas */
-  margin: 20px auto;
+  max-width: 500px; /* Límite de ancho para pantallas más pequeñas */
+  margin: 10px auto; /* Reducir margen */
   position: relative;
 }
 
 .ticker-left li {
   display: inline-block;
-  font-size: 16px; /* Disminuir el tamaño de fuente para pantallas más pequeñas */
-  line-height: 30px; /* Ajustar la altura de línea */
+  font-size: 14px; /* Reducir el tamaño de fuente */
+  line-height: 25px; /* Ajustar la altura de línea */
+  text-align: left; /* Justificar texto a la izquierda */
 }
 
 .marquee-container {
@@ -136,6 +137,8 @@ body {
 
   .menu {
     font-size: 2.5rem; /* Ajustar tamaño de fuente para menú en pantallas más pequeñas */
+    text-align: left; /* Justificar texto a la izquierda */
+    padding-left: 20px; /* Agregar relleno a la izquierda */
   }
 
   .menu a {
