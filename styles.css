@@ -30,15 +30,16 @@ body {
 }
 
 .ticker-container {
-  width: 50%;
+  width: 90%;
+  max-width: 500px; /* Limit width for smaller screens */
   margin: 20px auto;
   position: relative;
 }
 
 .ticker-left li {
   display: inline-block;
-  font-size: 18px;
-  line-height: 40px;
+  font-size: 16px; /* Decrease font size for smaller screens */
+  line-height: 30px; /* Adjust line height */
 }
 
 .marquee-container {
@@ -79,7 +80,7 @@ body {
   align-items: center;
   justify-content: center;
   animation: zoom 20s infinite alternate;
-  font-size: 5rem;
+  font-size: 4rem; /* Adjust font size for smaller screens */
   text-decoration: none;
   color: white;
   flex-direction: column;
@@ -90,7 +91,7 @@ body {
 .menu a,
 .presskit a,
 .index a {
-  font-size: 5rem;
+  font-size: 4rem; /* Adjust font size for smaller screens */
   text-decoration: none;
   color: white;
 }
@@ -112,11 +113,7 @@ body {
   }
 
   .ticker-container {
-    width: 80%; /* Adjust ticker width for smaller screens */
-  }
-
-  .marquee-container {
-    width: 100%; /* Adjust marquee container width for smaller screens */
+    width: 90%; /* Adjust ticker width for smaller screens */
   }
 
   .marquee {
@@ -127,6 +124,13 @@ body {
   .menu,
   .presskit,
   .index {
-    font-size: 3rem; /* Adjust landing page font size for smaller screens */
+    font-size: 2.5rem; /* Adjust landing page font size for smaller screens */
+  }
+
+  .landing a,
+  .menu a,
+  .presskit a,
+  .index a {
+    font-size: 2.5rem; /* Adjust link font size for smaller screens */
   }
 }
