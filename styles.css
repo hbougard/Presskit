@@ -74,7 +74,7 @@ body {
 .events li {
   list-style:circle;
   text-align: left; /* Alinear texto a la izquierda en las columnas */
-  padding: 0px;
+  padding: auto;
 }
 
 
