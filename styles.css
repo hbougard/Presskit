@@ -133,4 +133,13 @@ body {
   .index a {
     font-size: 2.5rem; /* Adjust link font size for smaller screens */
   }
+
+  .menu {
+    font-size: 2.5rem; /* Ajustar tamaño de fuente para pantallas más pequeñas */
+  }
+
+  .menu a {
+    font-size: 2.5rem; /* Ajustar tamaño de fuente para enlaces en pantallas más pequeñas */
+  }
+
 }
