@@ -71,14 +71,14 @@ body {
 
 .events ul,
 .events li {
-  list-style: circle;
+  list-style: none;
   text-align: left;
   padding: 0px;
 }
 
 
 .ul {
-  list-style-type: none;
+  list-style-type: circle;
   padding: 0%;
 }
 
