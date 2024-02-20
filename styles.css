@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif, sans-serif; /* Added a fallback font */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .background {
@@ -105,8 +106,27 @@ body {
   text-align: left;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .info {
     font-size: 1rem; /* Decrease font size for smaller screens */
+  }
+
+  .ticker-container {
+    width: 80%; /* Adjust ticker width for smaller screens */
+  }
+
+  .marquee-container {
+    width: 100%; /* Adjust marquee container width for smaller screens */
+  }
+
+  .marquee {
+    font-size: 1rem; /* Adjust marquee font size for smaller screens */
+  }
+
+  .landing,
+  .menu,
+  .presskit,
+  .index {
+    font-size: 3rem; /* Adjust landing page font size for smaller screens */
   }
 }
