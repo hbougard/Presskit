@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif, sans-serif; /* Added a fallback font */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; /* Prevenir el desplazamiento horizontal */
 }
 
 .background {
@@ -13,33 +13,33 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, #cecece, #3b3b3b); /* Background gradient */
-  z-index: -1; /* Ensure the background stays behind other content */
+  background: radial-gradient(circle, #cecece, #3b3b3b); /* Gradiente de fondo */
+  z-index: -1; /* Asegurar que el fondo esté detrás de otros contenidos */
 }
 
 .info {
   font-family: 'Cinzel';
   color: white;
-  font-size: 1.5rem; /* Adjust font size as needed */
+  font-size: 1.5rem; /* Tamaño de fuente inicial */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  padding: 20px; /* Add padding */
-  text-align: center; /* Center text */
+  align-items: center; /* Centrar horizontalmente */
+  justify-content: center; /* Centrar verticalmente */
+  padding: 20px; /* Añadir relleno */
+  text-align: center; /* Centrar texto */
 }
 
 .ticker-container {
   width: 90%;
-  max-width: 500px; /* Limit width for smaller screens */
+  max-width: 500px; /* Limitar el ancho para pantallas más pequeñas */
   margin: 20px auto;
   position: relative;
 }
 
 .ticker-left li {
   display: inline-block;
-  font-size: 16px; /* Decrease font size for smaller screens */
-  line-height: 30px; /* Adjust line height */
+  font-size: 16px; /* Disminuir el tamaño de fuente para pantallas más pequeñas */
+  line-height: 30px; /* Ajustar la altura de línea */
 }
 
 .marquee-container {
@@ -50,15 +50,15 @@ body {
 .marquee {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 35s linear infinite; /* Adjust duration as needed */
+  animation: marquee 35s linear infinite; /* Ajustar duración según sea necesario */
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(0); /* Start off-screen to the right */
+    transform: translateX(0); /* Comenzar fuera de la pantalla a la derecha */
   }
   100% {
-    transform: translateX(-50%); /* Move to the left */
+    transform: translateX(-50%); /* Mover hacia la izquierda */
   }
 }
 
@@ -80,7 +80,7 @@ body {
   align-items: center;
   justify-content: center;
   animation: zoom 20s infinite alternate;
-  font-size: 4rem; /* Adjust font size for smaller screens */
+  font-size: 4rem; /* Ajustar tamaño de fuente para pantallas más pequeñas */
   text-decoration: none;
   color: white;
   flex-direction: column;
@@ -91,7 +91,7 @@ body {
 .menu a,
 .presskit a,
 .index a {
-  font-size: 4rem; /* Adjust font size for smaller screens */
+  font-size: 4rem; /* Ajustar tamaño de fuente para pantallas más pequeñas */
   text-decoration: none;
   color: white;
 }
@@ -109,37 +109,36 @@ body {
 
 @media only screen and (max-width: 768px) {
   .info {
-    font-size: 1rem; /* Decrease font size for smaller screens */
+    font-size: 1rem; /* Disminuir tamaño de fuente para pantallas más pequeñas */
   }
 
   .ticker-container {
-    width: 90%; /* Adjust ticker width for smaller screens */
+    width: 90%; /* Ajustar ancho del ticker para pantallas más pequeñas */
   }
 
   .marquee {
-    font-size: 1rem; /* Adjust marquee font size for smaller screens */
+    font-size: 1rem; /* Ajustar tamaño de fuente del marquee para pantallas más pequeñas */
   }
 
   .landing,
   .menu,
   .presskit,
   .index {
-    font-size: 2.5rem; /* Adjust landing page font size for smaller screens */
+    font-size: 2.5rem; /* Ajustar tamaño de fuente de la página de destino para pantallas más pequeñas */
   }
 
   .landing a,
   .menu a,
   .presskit a,
   .index a {
-    font-size: 2.5rem; /* Adjust link font size for smaller screens */
+    font-size: 2.5rem; /* Ajustar tamaño de fuente de los enlaces para pantallas más pequeñas */
   }
 
   .menu {
-    font-size: 2.5rem; /* Ajustar tamaño de fuente para pantallas más pequeñas */
+    font-size: 2.5rem; /* Ajustar tamaño de fuente para menú en pantallas más pequeñas */
   }
 
   .menu a {
-    font-size: 2.5rem; /* Ajustar tamaño de fuente para enlaces en pantallas más pequeñas */
+    font-size: 2.5rem; /* Ajustar tamaño de fuente para enlaces de menú en pantallas más pequeñas */
   }
-
 }
