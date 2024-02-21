@@ -172,6 +172,11 @@ body {
   .info {
     font-size: 1rem;
     /* Disminuir tamaño de fuente para pantallas más pequeñas */
+    
+  }
+  .info a{
+    padding: 5px;
+    margin: 5px;
   }
 
   .ticker-container {
