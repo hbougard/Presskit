@@ -1,0 +1,18 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    grid-auto-rows: minmax(100px, auto); /* Automatically adjust row height */
+    grid-gap: 10px; /* Add some space between grid items */
+    padding: 20px; /* Add padding to the container */
+}
+
+.gallery img {
+    max-width: 100%; /* Limit image width to container width */
+    max-height: 100%; /* Limit image height to container height */
+    object-fit: contain; /* Maintain aspect ratio and fit the container */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
