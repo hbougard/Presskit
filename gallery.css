@@ -1,6 +1,6 @@
 .gallery {
     display: grid;
-    grid-template-columns: repeat(6, minmax(100px, 1fr)); /* Create 3 columns with flexible widths */
+    grid-template-columns: repeat(6, minmax(100px, 1fr)); /* Create 6 columns with flexible widths */
     grid-auto-rows: minmax(100px, auto); /* Automatically adjust row height */
     grid-gap: 10px; /* Add some space between grid items */
     padding: 75px; /* Add padding to the container */
@@ -19,4 +19,12 @@
     left: 50%; /* Colocar la imagen en el centro horizontal */
     top: 50%; /* Colocar la imagen en el centro vertical */
     z-index: 1; /* Asegurar que la imagen en hover esté sobre las demás */
+}
+
+/* Media query for small screens (e.g., mobile devices) */
+@media screen and (max-width: 768px) {
+    .gallery {
+        display: inline-table; /* Change display property for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
 }
