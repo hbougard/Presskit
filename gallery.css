@@ -38,6 +38,7 @@ body {
 
     .gallery img {
         height: auto; /* Adjust image height to maintain aspect ratio on smaller screens */
+        object-fit: contain;
     }
 }
 
