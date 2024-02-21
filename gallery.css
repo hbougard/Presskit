@@ -11,42 +11,43 @@
 
 body {
     background: radial-gradient(circle, #cecece, #3b3b3b);
-    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
+    margin: 0; /* Eliminate default body margin */
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Cambiar a diseño de cuadrícula flexible */
-    grid-auto-rows: minmax(100px, auto); /* Ajustar la altura automática de las filas */
-    grid-gap: 10px; /* Espacio entre elementos de la cuadrícula */
-    padding: 75px; /* Ajustar el relleno para dispositivos móviles */
+    grid-template-columns: repeat(5, minmax(200px, 1fr)); /* Display only 5 images per row */
+    grid-auto-rows: minmax(100px, auto); /* Automatically adjust row height */
+    grid-gap: 50px; /* Space between grid items */
+    padding: 75px; /* Adjust padding for mobile devices */
 }
 
 .gallery img {
-    width: 100%; /* Asegurar que las imágenes llenen sus celdas de la cuadrícula */
-    height: 100%; /* Asegurar que las imágenes llenen sus celdas de la cuadrícula */
-    object-fit: cover; /* Mantener la relación de aspecto y cubrir el contenedor */
-    transition: transform 0.3s ease; /* Transición suave para el efecto de desplazamiento */
+    width: 100%; /* Ensure images fill their grid cells */
+    height: 100%; /* Ensure images fill their grid cells */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 /* Media query for small screens (e.g., mobile devices) */
 @media screen and (max-width: 768px) {
     .gallery {
-        display: block; /* Cambiar a bloque para dispositivos móviles */
-        padding: 20px; /* Ajustar el relleno para dispositivos móviles */
+        display: block; /* Change to block for mobile devices */
+        padding: 20px; /* Adjust padding for mobile devices */
     }
 }
 
 .back-button {
-    position: absolute; /* Colocar el botón en posición absoluta */
-    font-size: 2rem; /* Tamaño de fuente más grande */
-    color: white; /* Color blanco */
-    text-decoration: none; /* Eliminar el subrayado del enlace */
-    padding-left: 75px; /* Ajustar el espacio del botón para dispositivos móviles */
+    position: absolute; /* Position the button absolutely */
+    font-size: 2rem; /* Larger font size */
+    color: white; /* White color */
+    text-decoration: none; /* Remove link underline */
+    padding-left: 75px; /* Adjust button spacing for mobile devices */
+    padding-top: 25px; /* Adjust button spacing for mobile devices */
 }
 
 .back-button a:hover {
-    color: white; /* Mantiene el color blanco incluso al pasar el mouse */
+    color: white; /* Maintain white color even on hover */
 }
 
 a:-webkit-any-link {

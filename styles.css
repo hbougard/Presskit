@@ -222,3 +222,34 @@ body {
 
 
 
+.back-button {
+  position: absolute; /* Colocar el botón en posición absoluta */
+  font-size: 2rem; /* Tamaño de fuente más grande */
+  color: white; /* Color blanco */
+  text-decoration: none; /* Eliminar el subrayado del enlace */
+  padding-left: 75px; /* Ajustar el espacio del botón para dispositivos móviles */
+  padding-top: 25px;
+}
+
+.back-button a:hover {
+  color: white; /* Mantiene el color blanco incluso al pasar el mouse */
+}
+a:-webkit-any-link {
+  color: white;
+}
+
+
+.sticker {
+  position: fixed; /* Fixed position */
+  top: 20px; /* Adjust top distance */
+  right: 20px; /* Adjust right distance */
+  z-index: 9999; /* Ensure the sticker appears above other content */
+}
+
+.sticker {
+  position: fixed; /* Fixed position */
+  top: 20px; /* Adjust top distance */
+  right: 20px; /* Adjust right distance */
+  z-index: 9999; /* Ensure the sticker appears above other content */
+  transform: rotate(15deg); /* Tilt the sticker by 15 degrees */
+}
