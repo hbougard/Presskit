@@ -4,10 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel', serif, sans-serif;
-  /* Fuente con respaldo */
   overflow-x: hidden;
-  /* Prevenir desplazamiento horizontal */
-
 }
 
 .background {
@@ -16,68 +13,43 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  
-  /* Gradiente de fondo */
   z-index: -1;
-  /* Asegurar que el fondo esté detrás de otros contenidos */
 }
-
-
-
-
-
 
 .info {
   font-family: 'Cinzel';
   color: white;
   font-size: 1.5rem;
-  /* Tamaño de fuente inicial */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Centrar horizontalmente */
   justify-content: center;
-  /* Centrar verticalmente */
   padding: 10px;
-  /* Reducir el relleno */
   text-align: center;
-  /* Centrar texto */
   overflow: hidden;
   background-image: url('img/BG.png');
   background-size: cover;
   background-position: center;
   background-blend-mode: darken;
   background-attachment: fixed;
-
 }
 
 .info a {
-  
-    margin: 0 30px; /* Adds margin of 10px to the left and right sides */
-    /* or */
-    padding: 0 30px; /* Adds padding of 10px to the left and right sides */
-  }
-
-
-
+  margin: 0 30px;
+}
 
 .ticker-container {
   width: 90%;
   max-width: 500px;
-  /* Límite de ancho para pantallas más pequeñas */
   margin: 10px auto;
-  /* Reducir margen */
   position: relative;
 }
 
 .ticker-left li {
   display: inline-block;
   font-size: 14px;
-  /* Reducir el tamaño de fuente */
   line-height: 25px;
-  /* Ajustar la altura de línea */
   text-align: left;
-  /* Justificar texto a la izquierda */
 }
 
 .marquee-container {
@@ -89,18 +61,15 @@ body {
   display: inline-block;
   white-space: nowrap;
   animation: marquee 35s linear infinite;
-  /* Ajustar duración según sea necesario */
 }
 
 @keyframes marquee {
   0% {
     transform: translateX(0);
-    /* Comenzar fuera de la pantalla a la derecha */
   }
 
   100% {
     transform: translateX(-50%);
-    /* Mover hacia la izquierda */
   }
 }
 
@@ -108,25 +77,20 @@ body {
   display: flex;
   justify-content: space-between;
   text-align: left;
-  /* Alinear texto a la izquierda en las columnas */
   flex-direction: column;
-  /* Mostrar las columnas una encima de la otra en dispositivos móviles */
 }
 
 .events ul,
 .events li {
   list-style: circle;
   text-align: left;
-  /* Alinear texto a la izquierda en las columnas */
   padding: auto;
 }
-
 
 .ul {
   list-style-type: circle;
   padding: 0%;
 }
-
 
 .landing,
 .menu,
@@ -138,7 +102,6 @@ body {
   justify-content: center;
   animation: zoom 20s infinite alternate;
   font-size: 4rem;
-  /* Ajustar tamaño de fuente para pantallas más pequeñas */
   text-decoration: none;
   color: white;
   flex-direction: column;
@@ -150,7 +113,6 @@ body {
 .presskit a,
 .index a {
   font-size: 4rem;
-  /* Ajustar tamaño de fuente para pantallas más pequeñas */
   text-decoration: none;
   color: white;
 }
@@ -165,99 +127,90 @@ body {
 .column-unit,
 .events {
   text-align: left;
-
 }
 
+/* Mobile styles */
 @media only screen and (max-width: 768px) {
   body {
-      overflow: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-size: 1rem;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 1rem;
   }
 
   .info {
-      padding: 5px;
-      margin: 0px;
+    padding: 5px;
+    margin: 0px;
   }
 
   .ticker-container {
-      width: 90%; /* Adjust width of ticker for smaller screens */
+    width: 90%;
   }
 
   .marquee {
-      font-size: 1rem; /* Adjust font size of marquee for smaller screens */
+    font-size: 1rem;
   }
 
   .landing,
   .menu,
   .presskit,
   .index {
-      font-size: 2.5rem; /* Adjust font size of landing page for smaller screens */
+    font-size: 2.5rem;
   }
 
   .landing a,
   .menu a,
   .presskit a,
   .index a {
-      font-size: 2.5rem; /* Adjust font size of links for smaller screens */
+    font-size: 2.5rem;
   }
 
   .menu {
-      text-align: left; /* Justify text to the left */
-      padding-left: 20px; /* Add padding to the left */
+    text-align: left;
+    padding-left: 20px;
   }
 
   .menu a {
-      font-size: 2.5rem; /* Adjust font size of menu links for smaller screens */
+    font-size: 2.5rem;
   }
 
   .sticker {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 9999;
-      transform: rotate(15deg) scale(0.5);
+    display: none;
+  }
+
+  .back-button {
+    display: none;
   }
 }
-
-
-
 
 /* Override overflow property for info.html to enable scrolling */
 body.info {
   overflow: scroll;
 }
 
-
-
-
 .back-button {
-  position: absolute; /* Colocar el botón en posición absoluta */
-  font-size: 2rem; /* Tamaño de fuente más grande */
-  color: white; /* Color blanco */
-  text-decoration: none; /* Eliminar el subrayado del enlace */
-  padding-left: 75px; /* Ajustar el espacio del botón para dispositivos móviles */
+  position: absolute;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  padding-left: 75px;
   padding-top: 25px;
 }
 
 .back-button a:hover {
-  color: white; /* Mantiene el color blanco incluso al pasar el mouse */
+  color: white;
 }
+
 a:-webkit-any-link {
   color: white;
 }
 
-
-
-
 .sticker {
-  position: fixed; /* Fixed position */
-  top: 20px; /* Adjust top distance */
-  right: 20px; /* Adjust right distance */
-  z-index: 9999; /* Ensure the sticker appears above other content */
-  transform: rotate(15deg); /* Tilt the sticker by 15 degrees */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  transform: rotate(15deg);
 }
