@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: 'Cinzel', serif, sans-serif; /* Fuente con respaldo */
   overflow-x: hidden; /* Prevenir desplazamiento horizontal */
+        background: #000; /* Define a cor de fundo padrão */
 }
 
 .background {
@@ -158,4 +159,17 @@ body {
   .menu a {
     font-size: 2.5rem; /* Ajustar tamaño de fuente para enlaces de menú en pantallas más pequeñas */
   }
+}
+
+.morphing-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/1.jpg' ); /* Initial background image */
+  background-size: cover;
+  background-position: center;
+  transition: background-image 3s ease-in-out; /* Transition effect */
+  z-index: -1;
 }
