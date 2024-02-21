@@ -168,53 +168,64 @@ body {
 
 }
 
-@media only screen and (max-width: 768px)
-body {
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-size: 1rem;
-}
+@media only screen and (max-width: 768px) {
+  body {
+      overflow: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-size: 1rem;
+  }
 
   .info {
-    padding: 5px;
-    margin: 0px;
+      padding: 5px;
+      margin: 0px;
   }
 
   .ticker-container {
-    width: 90%; /* Adjust width of ticker for smaller screens */
+      width: 90%; /* Adjust width of ticker for smaller screens */
   }
 
   .marquee {
-    font-size: 1rem; /* Adjust font size of marquee for smaller screens */
+      font-size: 1rem; /* Adjust font size of marquee for smaller screens */
   }
 
   .landing,
   .menu,
   .presskit,
   .index {
-    font-size: 2.5rem; /* Adjust font size of landing page for smaller screens */
+      font-size: 2.5rem; /* Adjust font size of landing page for smaller screens */
   }
 
   .landing a,
   .menu a,
   .presskit a,
   .index a {
-    font-size: 2.5rem; /* Adjust font size of links for smaller screens */
+      font-size: 2.5rem; /* Adjust font size of links for smaller screens */
   }
 
   .menu {
-    text-align: left; /* Justify text to the left */
-    padding-left: 20px; /* Add padding to the left */
+      text-align: left; /* Justify text to the left */
+      padding-left: 20px; /* Add padding to the left */
   }
 
   .menu a {
-    font-size: 2.5rem; /* Adjust font size of menu links for smaller screens */
+      font-size: 2.5rem; /* Adjust font size of menu links for smaller screens */
+  }
+
+  .sticker {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      transform: rotate(15deg) scale(0.5);
   }
 }
+
+
+
 
 /* Override overflow property for info.html to enable scrolling */
 body.info {
