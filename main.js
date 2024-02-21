@@ -15,12 +15,12 @@ function handleOrientation(event) {
   const gamma = event.gamma; // Get the gamma value (tilt from left to right)
   const beta = event.beta;   // Get the beta value (tilt from front to back)
 
-  // Normalize gamma and beta values to be in the range [0, 100]
-  const xPos = (gamma + 90) / 180 * 100;
-  const yPos = (beta + 90) / 180 * 100;
+  // Normalize gamma and beta values to be in the range [0, 100] based on screen dimensions
+  const xPos = (gamma + 90) / 180 * window.innerWidth;
+  const yPos = (beta + 90) / 180 * window.innerHeight;
 
   // Apply the gradient with the adjusted position
-  background.style.background = `radial-gradient(circle at ${xPos}% ${yPos}%, #cecece, #3b3b3b)`;
+  background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, #cecece, #3b3b3b)`;
 }
 
 // Add event listener for device orientation
