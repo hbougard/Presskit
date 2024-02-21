@@ -170,7 +170,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   body {
-    overflow: hidden; /* Disable scrolling on mobile */
+    overflow: hidden; /* Disable scrolling on mobile for all pages */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,6 +214,11 @@ body {
   .menu a {
     font-size: 2.5rem; /* Adjust font size of menu links for smaller screens */
   }
+}
+
+/* Override overflow property for info.html to enable scrolling */
+body.info {
+  overflow: auto;
 }
 
 
