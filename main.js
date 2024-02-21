@@ -9,9 +9,9 @@ function handleMouseMove(e) {
 // Add event listener for mouse movement
 document.addEventListener('mousemove', handleMouseMove);
 
-// Function to handle device orientation event
 function handleOrientation(event) {
-  const background = document.getElementById('background');
+  const background = document.querySelector('.background');
+  if (!background) return; // Check if background element exists
   const gamma = event.gamma; // Get the gamma value (tilt from left to right)
   const beta = event.beta;   // Get the beta value (tilt from front to back)
 
@@ -23,5 +23,4 @@ function handleOrientation(event) {
   background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, #cecece, #3b3b3b)`;
 }
 
-// Add event listener for device orientation
 window.addEventListener('deviceorientation', handleOrientation);
