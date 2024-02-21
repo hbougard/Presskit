@@ -21,7 +21,7 @@ function handleOrientation(event) {
   const yPos = (beta + 100) / 250 * window.innerHeight;
 
   // Apply the gradient with the adjusted position
-  background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, #cecece, #3b3b3b)`;
+  background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, #3b3b3b, #A2BDC5,  #cecece)`;
 }
 
 // Add event listener for device orientation
