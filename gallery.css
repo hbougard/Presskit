@@ -1,3 +1,17 @@
+/* Media query para pantallas pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        grid-gap: 20px;
+    }
+
+    .gallery img {
+        height: auto;
+        object-fit: contain;
+    }
+}
+
 /* Aplicar efecto hover solo a dispositivos no táctiles */
 @media (hover: hover) {
     .gallery img:hover {
@@ -16,10 +30,11 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr)); /* Ajustado para mostrar 5 imágenes por fila en escritorio */
+    grid-template-columns: repeat(5, 17%); /* Ajustado para mostrar 5 imágenes por fila en escritorio */
     grid-auto-rows: minmax(200px, auto); /* Ajustar altura de fila automáticamente */
-    grid-gap: 50px; /* Espacio entre elementos de la cuadrícula */
+    grid-gap: 30px; /* Espacio entre elementos de la cuadrícula */
     padding: 75px; /* Ajustar relleno para dispositivos de escritorio */
+    align-content: center;
 }
 
 .gallery img {
@@ -29,19 +44,7 @@ body {
     transition: transform 0.3s ease; /* Transición suave para el efecto hover */
 }
 
-/* Media query para pantallas pequeñas (por ejemplo, dispositivos móviles) */
-@media screen and (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Ajustado para 2 imágenes por fila en móviles */
-        padding: 20px; /* Ajustar relleno para dispositivos móviles */
-        grid-gap: 20px; /* Reducir el espacio entre elementos de la cuadrícula para dispositivos móviles */
-    }
 
-    .gallery img {
-        height: auto; /* Ajustar altura de imagen para mantener la relación de aspecto en pantallas más pequeñas */
-        object-fit: contain;
-    }
-}
 
 .back-button {
     position: absolute; /* Posicionar el botón absolutamente */
