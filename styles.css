@@ -3,9 +3,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Cinzel', serif, sans-serif; /* Fuente con respaldo */
-  overflow-x: hidden; /* Prevenir desplazamiento horizontal */
-        background: #000; /* Define a cor de fundo padrão */
+  font-family: 'Cinzel', serif, sans-serif;
+  /* Fuente con respaldo */
+  overflow-x: hidden;
+  /* Prevenir desplazamiento horizontal */
+
 }
 
 .background {
@@ -14,34 +16,68 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, #cecece, #3b3b3b); /* Gradiente de fondo */
-  z-index: -1; /* Asegurar que el fondo esté detrás de otros contenidos */
+  
+  /* Gradiente de fondo */
+  z-index: -1;
+  /* Asegurar que el fondo esté detrás de otros contenidos */
 }
+
+
+
+
+
 
 .info {
   font-family: 'Cinzel';
   color: white;
-  font-size: 1.5rem; /* Tamaño de fuente inicial */
+  font-size: 1.5rem;
+  /* Tamaño de fuente inicial */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrar horizontalmente */
-  justify-content: center; /* Centrar verticalmente */
-  padding: 10px; /* Reducir el relleno */
-  text-align: center; /* Centrar texto */
+  align-items: center;
+  /* Centrar horizontalmente */
+  justify-content: center;
+  /* Centrar verticalmente */
+  padding: 10px;
+  /* Reducir el relleno */
+  text-align: center;
+  /* Centrar texto */
+  overflow: hidden;
+  background-image: url('img/BG.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+
 }
+
+.info a {
+  
+    margin: 0 30px; /* Adds margin of 10px to the left and right sides */
+    /* or */
+    padding: 0 30px; /* Adds padding of 10px to the left and right sides */
+  }
+
+
+
 
 .ticker-container {
   width: 90%;
-  max-width: 500px; /* Límite de ancho para pantallas más pequeñas */
-  margin: 10px auto; /* Reducir margen */
+  max-width: 500px;
+  /* Límite de ancho para pantallas más pequeñas */
+  margin: 10px auto;
+  /* Reducir margen */
   position: relative;
 }
 
 .ticker-left li {
   display: inline-block;
-  font-size: 14px; /* Reducir el tamaño de fuente */
-  line-height: 25px; /* Ajustar la altura de línea */
-  text-align: left; /* Justificar texto a la izquierda */
+  font-size: 14px;
+  /* Reducir el tamaño de fuente */
+  line-height: 25px;
+  /* Ajustar la altura de línea */
+  text-align: left;
+  /* Justificar texto a la izquierda */
 }
 
 .marquee-container {
@@ -52,29 +88,36 @@ body {
 .marquee {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 35s linear infinite; /* Ajustar duración según sea necesario */
+  animation: marquee 35s linear infinite;
+  /* Ajustar duración según sea necesario */
 }
 
 @keyframes marquee {
   0% {
-    transform: translateX(0); /* Comenzar fuera de la pantalla a la derecha */
+    transform: translateX(0);
+    /* Comenzar fuera de la pantalla a la derecha */
   }
+
   100% {
-    transform: translateX(-50%); /* Mover hacia la izquierda */
+    transform: translateX(-50%);
+    /* Mover hacia la izquierda */
   }
 }
 
 .events {
   display: flex;
   justify-content: space-between;
-  text-align: left; /* Alinear texto a la izquierda en las columnas */
-  flex-direction: column; /* Mostrar las columnas una encima de la otra en dispositivos móviles */
+  text-align: left;
+  /* Alinear texto a la izquierda en las columnas */
+  flex-direction: column;
+  /* Mostrar las columnas una encima de la otra en dispositivos móviles */
 }
 
 .events ul,
 .events li {
-  list-style:circle;
-  text-align: left; /* Alinear texto a la izquierda en las columnas */
+  list-style: circle;
+  text-align: left;
+  /* Alinear texto a la izquierda en las columnas */
   padding: auto;
 }
 
@@ -94,7 +137,8 @@ body {
   align-items: center;
   justify-content: center;
   animation: zoom 20s infinite alternate;
-  font-size: 4rem; /* Ajustar tamaño de fuente para pantallas más pequeñas */
+  font-size: 4rem;
+  /* Ajustar tamaño de fuente para pantallas más pequeñas */
   text-decoration: none;
   color: white;
   flex-direction: column;
@@ -105,7 +149,8 @@ body {
 .menu a,
 .presskit a,
 .index a {
-  font-size: 4rem; /* Ajustar tamaño de fuente para pantallas más pequeñas */
+  font-size: 4rem;
+  /* Ajustar tamaño de fuente para pantallas más pequeñas */
   text-decoration: none;
   color: white;
 }
@@ -120,56 +165,55 @@ body {
 .column-unit,
 .events {
   text-align: left;
-  
+
 }
 
 @media only screen and (max-width: 768px) {
   .info {
-    font-size: 1rem; /* Disminuir tamaño de fuente para pantallas más pequeñas */
+    font-size: 1rem;
+    /* Disminuir tamaño de fuente para pantallas más pequeñas */
   }
 
   .ticker-container {
-    width: 90%; /* Ajustar ancho del ticker para pantallas más pequeñas */
+    width: 90%;
+    /* Ajustar ancho del ticker para pantallas más pequeñas */
   }
 
   .marquee {
-    font-size: 1rem; /* Ajustar tamaño de fuente del marquee para pantallas más pequeñas */
+    font-size: 1rem;
+    /* Ajustar tamaño de fuente del marquee para pantallas más pequeñas */
   }
 
   .landing,
   .menu,
   .presskit,
   .index {
-    font-size: 2.5rem; /* Ajustar tamaño de fuente de la página de destino para pantallas más pequeñas */
+    font-size: 2.5rem;
+    /* Ajustar tamaño de fuente de la página de destino para pantallas más pequeñas */
   }
 
   .landing a,
   .menu a,
   .presskit a,
   .index a {
-    font-size: 2.5rem; /* Ajustar tamaño de fuente de los enlaces para pantallas más pequeñas */
+    font-size: 2.5rem;
+    /* Ajustar tamaño de fuente de los enlaces para pantallas más pequeñas */
   }
 
   .menu {
-    font-size: 2.5rem; /* Ajustar tamaño de fuente para menú en pantallas más pequeñas */
-    text-align: left; /* Justificar texto a la izquierda */
-    padding-left: 20px; /* Agregar relleno a la izquierda */
+    font-size: 2.5rem;
+    /* Ajustar tamaño de fuente para menú en pantallas más pequeñas */
+    text-align: left;
+    /* Justificar texto a la izquierda */
+    padding-left: 20px;
+    /* Agregar relleno a la izquierda */
   }
 
   .menu a {
-    font-size: 2.5rem; /* Ajustar tamaño de fuente para enlaces de menú en pantallas más pequeñas */
+    font-size: 2.5rem;
+    /* Ajustar tamaño de fuente para enlaces de menú en pantallas más pequeñas */
   }
 }
 
-.morphing-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/img/1.jpg' ); /* Initial background image */
-  background-size: cover;
-  background-position: center;
-  transition: background-image 3s ease-in-out; /* Transition effect */
-  z-index: -1;
-}
+
+
