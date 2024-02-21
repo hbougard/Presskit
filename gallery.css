@@ -32,11 +32,9 @@ body {
 /* Media query para pantallas pequeñas (por ejemplo, dispositivos móviles) */
 @media screen and (max-width: 768px) {
     .gallery {
-        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr)); /* Ajustado para 2 imágenes por fila en móviles */
-        grid-auto-rows: minmax(200px, auto); /* Ajustar altura de fila automáticamente */
-        grid-gap: 20px; /* Reducir el espacio entre elementos de la cuadrícula para dispositivos móviles */
         padding: 20px; /* Ajustar relleno para dispositivos móviles */
+        grid-gap: 20px; /* Reducir el espacio entre elementos de la cuadrícula para dispositivos móviles */
     }
 
     .gallery img {
