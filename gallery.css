@@ -1,58 +1,58 @@
-/* Apply hover effect only to non-touch devices */
+/* Aplicar efecto hover solo a dispositivos no táctiles */
 @media (hover: hover) {
     .gallery img:hover {
         transform: scale(1.1);
         object-fit: contain;
-        left: 50%; /* Center horizontally */
-        top: 50%; /* Center vertically */
-        z-index: 1; /* Ensure the hovered image is above others */
+        left: 50%; /* Centrar horizontalmente */
+        top: 50%; /* Centrar verticalmente */
+        z-index: 1; /* Asegurar que la imagen en hover esté sobre las demás */
     }
 }
 
 body {
     background: radial-gradient(circle, #cecece, #3b3b3b);
-    margin: 0; /* Eliminate default body margin */
+    margin: 0; /* Eliminar margen predeterminado del body */
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr)); /* Adjusted to display 5 images per row on desktop */
-    grid-auto-rows: minmax(200px, auto); /* Automatically adjust row height */
-    grid-gap: 50px; /* Space between grid items */
-    padding: 75px; /* Adjust padding for desktop devices */
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* Ajustado para mostrar 5 imágenes por fila en escritorio */
+    grid-auto-rows: minmax(200px, auto); /* Ajustar altura de fila automáticamente */
+    grid-gap: 50px; /* Espacio entre elementos de la cuadrícula */
+    padding: 75px; /* Ajustar relleno para dispositivos de escritorio */
 }
 
 .gallery img {
-    width: 100%; /* Ensure images fill their grid cells */
-    height: 100%; /* Ensure images fill their grid cells */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    width: 100%; /* Asegurar que las imágenes llenen sus celdas de la cuadrícula */
+    height: 100%; /* Asegurar que las imágenes llenen sus celdas de la cuadrícula */
+    object-fit: cover; /* Mantener la relación de aspecto y cubrir el contenedor */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
 }
 
-/* Media query for small screens (e.g., mobile devices) */
+/* Media query para pantallas pequeñas (por ejemplo, dispositivos móviles) */
 @media screen and (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Adjusted for 2 images per row on mobile */
-        padding: 20px; /* Adjust padding for mobile devices */
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* Ajustado para 2 imágenes por fila en móviles */
+        padding: 20px; /* Ajustar relleno para dispositivos móviles */
     }
 
     .gallery img {
-        height: auto; /* Adjust image height to maintain aspect ratio on smaller screens */
+        height: auto; /* Ajustar altura de imagen para mantener la relación de aspecto en pantallas más pequeñas */
         object-fit: contain;
     }
 }
 
 .back-button {
-    position: absolute; /* Position the button absolutely */
-    font-size: 2rem; /* Larger font size */
-    color: white; /* White color */
-    text-decoration: none; /* Remove link underline */
-    padding-left: 75px; /* Adjust button spacing for mobile devices */
-    padding-top: 25px; /* Adjust button spacing for mobile devices */
+    position: absolute; /* Posicionar el botón absolutamente */
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    color: white; /* Color blanco */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    padding-left: 75px; /* Ajustar espaciado del botón para dispositivos móviles */
+    padding-top: 25px; /* Ajustar espaciado del botón para dispositivos móviles */
 }
 
 .back-button a:hover {
-    color: white; /* Maintain white color even on hover */
+    color: white; /* Mantener el color blanco incluso al pasar el ratón */
 }
 
 a:-webkit-any-link {
