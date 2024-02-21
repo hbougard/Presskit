@@ -1,5 +1,5 @@
 .gallery {
-    display: grid;
+    display: table;
     grid-template-columns: repeat(6, minmax(100px, 1fr)); /* Create 6 columns with flexible widths */
     grid-auto-rows: minmax(100px, auto); /* Automatically adjust row height */
     grid-gap: 10px; /* Add some space between grid items */
@@ -24,7 +24,18 @@
 /* Media query for small screens (e.g., mobile devices) */
 @media screen and (max-width: 768px) {
     .gallery {
-        display: inline-table; /* Change display property for smaller screens */
+        display: table; /* Change display property for smaller screens */
         padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Apply hover effect only to non-touch devices */
+@media (hover: hover) {
+    .gallery img:hover {
+        transform: scale(1.1);
+        object-fit: contain;
+        left: 50%; /* Center horizontally */
+        top: 50%; /* Center vertically */
+        z-index: 1; /* Ensure the hovered image is above others */
     }
 }
