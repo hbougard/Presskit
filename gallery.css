@@ -1,18 +1,22 @@
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    grid-template-columns: repeat(6, minmax(100px, 1fr)); /* Create 3 columns with flexible widths */
     grid-auto-rows: minmax(100px, auto); /* Automatically adjust row height */
     grid-gap: 10px; /* Add some space between grid items */
-    padding: 20px; /* Add padding to the container */
+    padding: 75px; /* Add padding to the container */
 }
 
 .gallery img {
-    max-width: 100%; /* Limit image width to container width */
-    max-height: 100%; /* Limit image height to container height */
-    object-fit: contain; /* Maintain aspect ratio and fit the container */
+    width: 100%; /* Ensure images fill their grid cells */
+    height: 100%; /* Ensure images fill their grid cells */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
     transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .gallery img:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.1);
+    object-fit: contain;
+    left: 50%; /* Colocar la imagen en el centro horizontal */
+    top: 50%; /* Colocar la imagen en el centro vertical */
+    z-index: 1; /* Asegurar que la imagen en hover esté sobre las demás */
 }
