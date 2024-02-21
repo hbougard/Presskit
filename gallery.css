@@ -16,10 +16,10 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, minmax(200px, 1fr)); /* Display only 5 images per row */
-    grid-auto-rows: minmax(100px, auto); /* Automatically adjust row height */
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr)); /* Adjusted to allow 2 images per row */
+    grid-auto-rows: minmax(200px, auto); /* Automatically adjust row height */
     grid-gap: 50px; /* Space between grid items */
-    padding: 75px; /* Adjust padding for mobile devices */
+    padding: 75px; /* Adjust padding for desktop devices */
 }
 
 .gallery img {
@@ -32,8 +32,12 @@ body {
 /* Media query for small screens (e.g., mobile devices) */
 @media screen and (max-width: 768px) {
     .gallery {
-        display: block; /* Change to block for mobile devices */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted for 2 images per row */
         padding: 20px; /* Adjust padding for mobile devices */
+    }
+
+    .gallery img {
+        height: auto; /* Adjust image height to maintain aspect ratio on smaller screens */
     }
 }
 
