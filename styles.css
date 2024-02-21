@@ -171,7 +171,7 @@ body {
 @media only screen and (max-width: 768px) {
   body {
     overflow: auto; /* Disable scrolling on mobile for all pages */
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -241,12 +241,7 @@ a:-webkit-any-link {
 }
 
 
-.sticker {
-  position: fixed; /* Fixed position */
-  top: 20px; /* Adjust top distance */
-  right: 20px; /* Adjust right distance */
-  z-index: 9999; /* Ensure the sticker appears above other content */
-}
+
 
 .sticker {
   position: fixed; /* Fixed position */
