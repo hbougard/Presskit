@@ -169,56 +169,53 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .info {
-    font-size: 1rem;
-    /* Disminuir tamaño de fuente para pantallas más pequeñas */
-    
+  body {
+    overflow: hidden; /* Disable scrolling on mobile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 1rem; /* Decrease font size for smaller screens */
   }
-  .info a{
+
+  .info {
     padding: 5px;
     margin: 5px;
   }
 
   .ticker-container {
-    width: 90%;
-    /* Ajustar ancho del ticker para pantallas más pequeñas */
+    width: 90%; /* Adjust width of ticker for smaller screens */
   }
 
   .marquee {
-    font-size: 1rem;
-    /* Ajustar tamaño de fuente del marquee para pantallas más pequeñas */
+    font-size: 1rem; /* Adjust font size of marquee for smaller screens */
   }
 
   .landing,
   .menu,
   .presskit,
   .index {
-    font-size: 2.5rem;
-    /* Ajustar tamaño de fuente de la página de destino para pantallas más pequeñas */
+    font-size: 2.5rem; /* Adjust font size of landing page for smaller screens */
   }
 
   .landing a,
   .menu a,
   .presskit a,
   .index a {
-    font-size: 2.5rem;
-    /* Ajustar tamaño de fuente de los enlaces para pantallas más pequeñas */
+    font-size: 2.5rem; /* Adjust font size of links for smaller screens */
   }
 
   .menu {
-    font-size: 2.5rem;
-    /* Ajustar tamaño de fuente para menú en pantallas más pequeñas */
-    text-align: left;
-    /* Justificar texto a la izquierda */
-    padding-left: 20px;
-    /* Agregar relleno a la izquierda */
+    text-align: left; /* Justify text to the left */
+    padding-left: 20px; /* Add padding to the left */
   }
 
   .menu a {
-    font-size: 2.5rem;
-    /* Ajustar tamaño de fuente para enlaces de menú en pantallas más pequeñas */
+    font-size: 2.5rem; /* Adjust font size of menu links for smaller screens */
   }
 }
+
 
 
 
