@@ -66,8 +66,8 @@ font-style: bold;
 
 .marquee {
   display: inline-block;
-  white-space: nowrap;
-  animation: marquee 35s linear infinite;
+  white-space:nowrap;
+  animation: marquee 175s linear infinite;
 }
 @keyframes marquee {
   0% {
@@ -151,7 +151,12 @@ font-style: bold;
   .info {
     padding: 5px;
     margin: 0px;
+    font-size: 1rem;
   }
+
+  .info br {
+    margin-bottom:0.1em; /* Hide <br> elements on screens narrower than 600px */
+}
 
   .ticker-container {
     width: 90%;
