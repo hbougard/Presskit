@@ -17,8 +17,8 @@ function handleOrientation(event) {
   const beta = event.beta;   // Get the beta value (tilt from front to back)
 
   // Normalize gamma and beta values to be in the range [0, 100] based on screen dimensions
-  const xPos = (gamma + 90) / 150 * window.innerWidth;
-  const yPos = (beta + 90) / 150 * window.innerHeight;
+  const xPos = (gamma + 90) / 100 * window.innerWidth;
+  const yPos = (beta + 90) / 100 * window.innerHeight;
 
   // Apply the gradient with the adjusted position
   background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, #3b3b3b, #A2BDC5,  #cecece)`;
