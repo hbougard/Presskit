@@ -1,6 +1,7 @@
 body {
     display:flex;
     margin: 0;
+    height: 100vh;
 }
 
 .gallery {
@@ -10,6 +11,8 @@ body {
     padding: 75px;
     align-content: center;
     height: auto;
+    object-fit: contain;
+    
 }
 
 .gallery img {
@@ -50,6 +53,7 @@ a, a:link, a:visited, a:focus, a:hover, a:active  {
 
 @media only screen and (max-width: 768px) {
     .gallery {
+        height: auto;
         grid-template-columns: repeat(2, 2fr);
     }
 
@@ -67,4 +71,5 @@ a, a:link, a:visited, a:focus, a:hover, a:active  {
         z-index: 1;
     }
 }
+
 
