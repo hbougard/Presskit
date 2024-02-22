@@ -9,6 +9,7 @@ body {
     grid-gap: 30px;
     padding: 75px;
     align-content: center;
+    height: 100%;
 }
 
 .gallery img {
