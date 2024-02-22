@@ -1,8 +1,9 @@
 // Function to handle mouse movement event
 function handleMouseMove(e) {
   const background = document.getElementById('background');
-  const xPos = e.clientX / window.innerWidth * 100;
-  const yPos = e.clientY / window.innerHeight * 100;
+  const rect = background.getBoundingClientRect(); // Get the position of the background element
+  const xPos = (e.clientX - rect.left) / rect.width * 100; // Calculate xPos relative to the background element
+  const yPos = (e.clientY - rect.top) / rect.height * 100; // Calculate yPos relative to the background element
   background.style.background = `radial-gradient(circle at ${xPos}% ${yPos}%,  rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%)`;
 }
 
