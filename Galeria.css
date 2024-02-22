@@ -7,8 +7,6 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, 17%); /* Ajustado para mostrar 5 imágenes por fila en escritorio */
-    grid-auto-rows: minmax(200px, auto); /* Ajustar altura de fila automáticamente */
     grid-gap: 30px; /* Espacio entre elementos de la cuadrícula */
     padding: 75px; /* Ajustar relleno para dispositivos de escritorio */
     align-content: center;
@@ -67,6 +65,3 @@ a:-webkit-any-link {
         z-index: 1; /* Asegurar que la imagen en hover esté sobre las demás */
     }
 }
-
-
-  
