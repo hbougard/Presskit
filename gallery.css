@@ -21,6 +21,7 @@ body {
 .back-button {
     position: absolute;
     font-size: 2rem;
+    background-color: none;
     color: white;
     text-decoration: none;
     padding-left: 75px;
@@ -31,7 +32,7 @@ body {
     color: white;
 }
 
-a:-webkit-any-link {
+a, a:link, a:visited, a:focus, a:hover, a:active  {
     color: white;
 }
 
