@@ -9,7 +9,8 @@ body {
     grid-gap: 30px;
     padding: 75px;
     align-content: center;
-    height: 100%;
+    height: auto;
+    
 }
 
 .gallery img {
@@ -65,3 +66,4 @@ a, a:link, a:visited, a:focus, a:hover, a:active  {
         z-index: 1;
     }
 }
+
