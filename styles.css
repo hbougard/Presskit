@@ -20,7 +20,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
- 
+  flex-direction: none;
   
 }
 
@@ -37,7 +37,7 @@ body {
   justify-content: center;
   padding: 10px;
   text-align: center;
-  /* overflow-x: auto; */
+  overflow-x: auto;
 }
 
 .info a {
@@ -150,6 +150,7 @@ body {
     padding: 5px;
     margin: 0px;
     font-size: 1rem;
+   
   }
 
   .info br {
