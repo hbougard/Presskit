@@ -42,11 +42,11 @@ a, a:link, a:visited, a:focus, a:hover, a:active  {
     right: 20px;
     z-index: 9999;
     transform: rotate(15deg);
+    scale: 0.7;
 }
 
 @media only screen and (max-width: 768px) {
     .gallery {
-        display: grid;
         grid-template-columns: repeat(2, 2fr);
     }
 
