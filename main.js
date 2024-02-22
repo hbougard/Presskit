@@ -24,6 +24,10 @@ function handleOrientation(event) {
   background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, #3b3b3b, #A2BDC5,  #cecece)`;
 }
 
-// Add event listener for device orientation
-window.addEventListener('deviceorientation', handleOrientation);
-
+// Add event listener for device orientation if supported
+if ('DeviceOrientationEvent' in window) {
+  window.addEventListener('deviceorientation', handleOrientation);
+} else {
+  // Fallback mechanism if device orientation is not supported
+  console.log('Device orientation not supported.');
+}
