@@ -12,16 +12,18 @@ document.addEventListener('mousemove', handleMouseMove);
 // Function to handle device orientation event
 function handleOrientation(event) {
   const background = document.getElementById('background');
-  if (!background) return; // Check if background element exists
-  const gamma = event.gamma; // Get the gamma value (tilt from left to right)
-  const beta = event.beta;   // Get the beta value (tilt from front to back)
+  if (!background) return; // Verificar si existe el elemento de fondo
 
-  // Normalize gamma and beta values to be in the range [0, 100] based on screen dimensions
-  const xPos = (gamma + 100) / 150 * window.innerWidth;
-  const yPos = (beta + 100) / 150 * window.innerHeight;
+  const gamma = event.gamma; // Obtener el valor gamma (inclinación de izquierda a derecha)
+  const beta = event.beta;   // Obtener el valor beta (inclinación de adelante hacia atrás)
 
-  // Apply the gradient with the adjusted position
-  background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, #3b3b3b, #A2BDC5,  #cecece)`;
+  // Calcular las coordenadas de posición basadas en el tamaño de la pantalla
+  const xPos = (gamma + 90) / 180 * window.innerWidth;
+  const yPos = (beta + 90) / 180 * window.innerHeight;
+
+  // Aplicar los cambios a la posición del elemento de fondo
+  background.style.left = xPos + 'px';
+  background.style.top = yPos + 'px';
 }
 
 // Add event listener for device orientation
