@@ -17,8 +17,8 @@ function handleOrientation(event) {
   const beta = event.beta;   // Get the beta value (tilt from front to back)
 
   // Normalize gamma and beta values to be in the range [-1, 1]
-  const gammaNormalized = (gamma + 90) / 180; // Range from -90 to 90 to [0, 1]
-  const betaNormalized = (beta + 90) / 180;   // Range from -90 to 90 to [0, 1]
+  const gammaNormalized = (gamma + 90) / 100; // Range from -90 to 90 to [0, 1]
+  const betaNormalized = (beta + 90) / 100;   // Range from -90 to 90 to [0, 1]
 
   // Adjust the normalized values to ensure neutral position is centered
   const xPos = (gammaNormalized - 0.5) * window.innerWidth;
