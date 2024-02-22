@@ -3,7 +3,7 @@ function handleMouseMove(e) {
   const background = document.getElementById('background');
   const xPos = e.clientX / window.innerWidth * 100;
   const yPos = e.clientY / window.innerHeight * 100;
-  background.style.background = `radial-gradient(circle at ${xPos}% ${yPos}%, #3b3b3b, #A2BDC5,  #cecece)`;
+  background.style.background = `radial-gradient(circle at ${xPos}% ${yPos}%,  rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%)`;
 }
 
 // Add event listener for mouse movement
@@ -21,7 +21,7 @@ function handleOrientation(event) {
   const yPos = (beta + 0) / 100 * window.innerHeight;
 
   // Apply the gradient with the adjusted position
-  background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, #3b3b3b, #A2BDC5,  #cecece)`;
+  background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px,  rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%)`;
 }
 
 // Add event listener for device orientation if supported
@@ -31,3 +31,22 @@ if ('DeviceOrientationEvent' in window) {
   // Fallback mechanism if device orientation is not supported
   console.log('Device orientation not supported.');
 }
+
+
+
+// You can adjust the rate of hue shift by changing this variable
+const hueShiftSpeed = 5; // 1 degree per frame
+
+function updateHue() {
+  const root = document.documentElement;
+  let currentHue = parseFloat(getComputedStyle(root).getPropertyValue('--hue-start'));
+  currentHue = (currentHue + hueShiftSpeed) % 360; // Update hue value correctly
+  root.style.setProperty('--hue-start', currentHue);
+  
+  // Update the second color in the radial gradient
+  root.style.setProperty('--color2', `hsl(${currentHue}, 100%, 50%)`);
+
+  requestAnimationFrame(updateHue);
+}
+
+updateHue();
