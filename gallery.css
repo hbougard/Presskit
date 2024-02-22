@@ -1,29 +1,4 @@
-/* Media query for small screens (e.g., mobile devices) */
-@media screen and (max-width: 768px) {
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 20px;
-        grid-gap: 20px;
-    }
 
-    .gallery img {
-        height: auto;
-        object-fit: contain;
-    }
-}
-
-/* Aplicar efecto hover solo a dispositivos no táctiles */
-@media (hover: hover) {
-    .gallery img:hover {
-        transform: scale(1.1);
-        object-fit: contain;
-        left: 50%; /* Centrar horizontalmente */
-        top: 50%; /* Centrar verticalmente */
-        z-index: 1; /* Asegurar que la imagen en hover esté sobre las demás */
-    }
-}
 
 body {
     background: radial-gradient(circle, #cecece, #3b3b3b);
@@ -63,4 +38,32 @@ body {
 
 a:-webkit-any-link {
     color: white;
+}
+
+.sticker {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    transform: rotate(15deg);
+  }
+
+  @media only screen and (max-width: 768px) {
+    
+
+    
+    .sticker {
+        display: none;
+      }
+}
+
+/* Aplicar efecto hover solo a dispositivos no táctiles */
+@media (hover: hover) {
+    .gallery img:hover {
+        transform: scale(1.1);
+        object-fit: contain;
+        left: 50%; /* Centrar horizontalmente */
+        top: 50%; /* Centrar verticalmente */
+        z-index: 1; /* Asegurar que la imagen en hover esté sobre las demás */
+    }
 }
