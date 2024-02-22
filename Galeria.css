@@ -12,6 +12,8 @@ body {
     align-content: center;
 }
 
+
+
 .gallery img {
     width: 100%; /* Asegurar que las imágenes llenen sus celdas de la cuadrícula */
     height: 100%; /* Asegurar que las imágenes llenen sus celdas de la cuadrícula */
@@ -47,13 +49,19 @@ a:-webkit-any-link {
   }
 
   @media only screen and (max-width: 768px) {
-    
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); /* One column with equal width */
+        grid-gap: 30px; /* Space between grid items */
+        padding: 75px; /* Padding around the grid */
+        justify-content: center; /* Center the content horizontally */
+        align-content: center; /* Center the content vertically */
+    }
 
-    
     .sticker {
         display: none;
-      }
+    }
 }
+
 
 /* Aplicar efecto hover solo a dispositivos no táctiles */
 @media (hover: hover) {

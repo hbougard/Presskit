@@ -1,39 +1,34 @@
-
-
 body {
     background: radial-gradient(circle, #cecece, #3b3b3b);
-    margin: 0; /* Eliminar margen predeterminado del body */
+    margin: 0;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, 17%); /* Ajustado para mostrar 5 imágenes por fila en escritorio */
-    grid-auto-rows: minmax(200px, auto); /* Ajustar altura de fila automáticamente */
-    grid-gap: 30px; /* Espacio entre elementos de la cuadrícula */
-    padding: 75px; /* Ajustar relleno para dispositivos de escritorio */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding: 75px;
     align-content: center;
 }
 
 .gallery img {
-    width: 100%; /* Asegurar que las imágenes llenen sus celdas de la cuadrícula */
-    height: 100%; /* Asegurar que las imágenes llenen sus celdas de la cuadrícula */
-    object-fit: cover; /* Mantener la relación de aspecto y cubrir el contenedor */
-    transition: transform 0.3s ease; /* Transición suave para el efecto hover */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-
-
 .back-button {
-    position: absolute; /* Posicionar el botón absolutamente */
-    font-size: 2rem; /* Tamaño de fuente más grande */
-    color: white; /* Color blanco */
-    text-decoration: none; /* Quitar subrayado del enlace */
-    padding-left: 75px; /* Ajustar espaciado del botón para dispositivos móviles */
-    padding-top: 25px; /* Ajustar espaciado del botón para dispositivos móviles */
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    padding-left: 75px;
+    padding-top: 25px;
 }
 
 .back-button a:hover {
-    color: white; /* Mantener el color blanco incluso al pasar el ratón */
+    color: white;
 }
 
 a:-webkit-any-link {
@@ -46,27 +41,24 @@ a:-webkit-any-link {
     right: 20px;
     z-index: 9999;
     transform: rotate(15deg);
-  }
-
-  @media only screen and (max-width: 768px) {
-    
-
-    
-    .sticker {
-        display: none;
-      }
 }
 
-/* Aplicar efecto hover solo a dispositivos no táctiles */
+@media only screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .sticker {
+        display: none;
+    }
+}
+
 @media (hover: hover) {
     .gallery img:hover {
         transform: scale(1.1);
         object-fit: contain;
-        left: 50%; /* Centrar horizontalmente */
-        top: 50%; /* Centrar verticalmente */
-        z-index: 1; /* Asegurar que la imagen en hover esté sobre las demás */
+        left: 50%;
+        top: 50%;
+        z-index: 1;
     }
 }
-
-
-  
