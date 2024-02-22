@@ -33,20 +33,3 @@ if ('DeviceOrientationEvent' in window) {
 }
 
 
-
-// You can adjust the rate of hue shift by changing this variable
-const hueShiftSpeed = 5; // 1 degree per frame
-
-function updateHue() {
-  const root = document.documentElement;
-  let currentHue = parseFloat(getComputedStyle(root).getPropertyValue('--hue-start'));
-  currentHue = (currentHue + hueShiftSpeed) % 360; // Update hue value correctly
-  root.style.setProperty('--hue-start', currentHue);
-  
-  // Update the second color in the radial gradient
-  root.style.setProperty('--color2', `hsl(${currentHue}, 100%, 50%)`);
-
-  requestAnimationFrame(updateHue);
-}
-
-updateHue();
