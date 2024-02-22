@@ -20,7 +20,7 @@ function handleOrientation(event) {
   const gammaNormalized = (gamma + 90) / 180; // Range from -90 to 90 to [0, 1]
   const betaNormalized = (beta + 90) / 180;   // Range from -90 to 90 to [0, 1]
 
-  // Calculate the position based on the screen dimensions
+  // Adjust the normalized values to ensure neutral position is centered
   const xPos = (gammaNormalized - 0.5) * window.innerWidth;
   const yPos = (betaNormalized - 0.5) * window.innerHeight;
 
@@ -28,6 +28,7 @@ function handleOrientation(event) {
   background.style.left = xPos + 'px';
   background.style.top = yPos + 'px';
 }
+
 
 // Add event listener for device orientation
 window.addEventListener('deviceorientation', handleOrientation);
