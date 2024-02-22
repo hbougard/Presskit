@@ -5,7 +5,7 @@ body {
   padding: 0;
   font-family: 'Rokkit', serif, sans-serif;
   font-weight: 900;
-font-style: bold;
+font-style:;
   overflow-x: hidden;
 }
 
@@ -90,7 +90,6 @@ font-style: bold;
 .events li {
   list-style: circle;
   text-align: left;
-  padding: auto;
 }
 
 .ul {
