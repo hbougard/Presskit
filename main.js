@@ -6,7 +6,7 @@ function handleMouseMove(e) {
   const rect = background.getBoundingClientRect(); // Get the position of the background element
   const xPos = (e.clientX - rect.left) / rect.width * 100; // Calculate xPos relative to the background element
   const yPos = (e.clientY - rect.top) / rect.height * 100; // Calculate yPos relative to the background element
-  background.style.background = `radial-gradient(circle at ${xPos}% ${yPos}%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%)`;
+  background.style.background = `radial-gradient(circle at ${xPos}% ${yPos}%, rgba(57,165,204,1) 0%, rgba(26,38,102,1) 18%, rgba(0,0,0,1) 35%)`;
 }
 
 // Add event listener for mouse movement
@@ -20,7 +20,7 @@ function handleOrientation(event) {
   const beta = event.beta;
   const xPos = (gamma + 50) / 100 * window.innerWidth;
   const yPos = (beta + -40) / 100 * window.innerHeight; 
-  background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%)`;
+  background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, rgba(57,165,204,1) 0%, rgba(26,38,102,1) 18%, rgba(0,0,0,1) 35%)`;
 }
 
 // Check if device orientation event is supported
@@ -37,7 +37,7 @@ window.addEventListener("load", () => {
   window.removeEventListener('deviceorientation', handleOrientation);
 
   // Set a default gradient as fallback
-  const defaultGradient = `radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%)`;
+  const defaultGradient = `radial-gradient(circle at 50% 50%, rgba(57,165,204,1) 0%, rgba(26,38,102,1) 18%, rgba(0,0,0,1) 35%)`;
   background.style.background = defaultGradient; // Set the default gradient
 });
 

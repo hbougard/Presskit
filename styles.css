@@ -94,19 +94,19 @@ body {
   font-family: "Kode Mono", monospace;
   height: 100vh;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
   text-decoration: none;
   color: white;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .landing a,
 .menu a,
 .presskit a,
 .index a {
-  font-size: 4rem;
+  font-size: 2rem;
   text-decoration: none;
   color: white;
 }
@@ -118,7 +118,6 @@ body {
   color: white;
 }
 
-.column-unit,
 .events {
   text-align: left;
 }
@@ -224,16 +223,14 @@ a:-webkit-any-link {
   z-index: 9999;
 }
 
-
 @keyframes moveSticker {
   0% {
-      transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   100% {
-      transform: translate(calc(100vw - 129px), calc(100vh - 129px));
+    transform: translate(calc(100vh - 15%), calc(100vh - 10%));
   }
 }
-
 
 .roboto-thin,
 .roboto-light,
@@ -307,5 +304,31 @@ a:-webkit-any-link {
 
 /* Fallback background style */
 .no-device-orientation #background {
-  background: radial-gradient(circle at {xPos}% {yPos}%, rgba(63, 94, 251, 1) 0%, rgba(70, 204, 252, 1) 18%, rgba(0, 0, 0, 1) 35%);
+  background: radial-gradient(circle at {xPos}% {yPos}%, rgba(57,165,204,1) 0%, rgba(26,38,102,1) 18%, rgba(0,0,0,1) 35%);
+}
+
+.column {
+  width: auto; /* Set width to auto */
+  padding: 0 1px; /* Add padding for spacing between columns */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  margin: auto;
+}
+
+.column a {
+  display: block; /* Ensure links fill entire column */
+  text-align: center; /* Center align links */
+  font-size: 1.5rem;
+}
+
+.presskit {
+  font-family: "Kode Mono", monospace;
+  font-size: 2rem; /* Adjust font size */
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  flex-direction: row;
 }
