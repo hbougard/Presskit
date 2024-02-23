@@ -312,3 +312,25 @@ a:-webkit-any-link {
   font-style: italic;
 }
 
+/* CSS */
+#background {
+  background-color: white; /* Fondo predeterminado */
+  background-image: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#background {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
+}
+
+/* Fallback background style */
+.no-device-orientation #background {
+  background: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
+}
