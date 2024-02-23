@@ -219,12 +219,21 @@ a:-webkit-any-link {
 }
 
 .sticker {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  position: absolute;
+  margin: 0%;
   z-index: 9999;
-  transform: rotate(15deg);
 }
+
+
+@keyframes moveSticker {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(calc(100vw - 129px), calc(100vh - 129px));
+  }
+}
+
 
 .roboto-thin,
 .roboto-light,
