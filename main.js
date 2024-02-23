@@ -6,8 +6,8 @@ if ('DeviceOrientationEvent' in window) {
   // Fallback mechanism if device orientation is not supported
   console.log('Device orientation not supported.');
   document.documentElement.classList.add('no-device-orientation'); // Agrega una clase al elemento raíz para indicar que no es compatible con la orientación del dispositivo
-  // Remove mouse movement event listener
-  document.removeEventListener('mousemove', handleMouseMove);
+  document.removeEventListener('deviceorientation', handleOrientation);
+  
 }
 
 // Function to handle mouse movement event
@@ -30,7 +30,7 @@ function handleOrientation(event) {
   const beta = event.beta;
 
   const xPos = (gamma + 50) / 100 * window.innerWidth;
-  const yPos = (beta + 50) / 100 * window.innerHeight;
+  const yPos = (beta + -40) / 100 * window.innerHeight;
 
   background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%)`;
 }

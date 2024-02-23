@@ -316,7 +316,7 @@ a:-webkit-any-link {
 
 /* CSS */
 #background {
-  background-color: white; /* Fondo predeterminado */
+  
   background-image: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
   position: absolute;
   top: 0;
