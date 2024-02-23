@@ -1,31 +1,22 @@
-
-
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: 'Kode Mono', monospace;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
   overflow-x: hidden;
 }
-  
- 
-
 
 .background {
-  pointer-events: none; 
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  
 }
-
-
-
 
 .info {
   font-family: 'Roboto';
@@ -65,18 +56,18 @@ body {
 
 .marquee {
   display: inline-block;
-  white-space:nowrap;
+  white-space: nowrap;
   animation: marquee 175s linear infinite;
 }
+
 @keyframes marquee {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
-
 
 .events {
   display: flex;
@@ -110,9 +101,6 @@ body {
   color: white;
   flex-direction: column;
 }
-
-
-
 
 .landing a,
 .menu a,
@@ -150,12 +138,11 @@ body {
     padding: 5px;
     margin: 0px;
     font-size: 1rem;
-   
   }
 
   .info br {
-    margin-bottom:0.1em; /* Hide <br> elements on screens narrower than 600px */
-}
+    margin-bottom: 0.1em; /* Hide <br> elements on screens narrower than 600px */
+  }
 
   .ticker-container {
     width: 90%;
@@ -196,14 +183,13 @@ body {
     display: none;
   }
 
-  .background
-   {
+  .background {
     width: 100%;
     height: 100vh;
     background: inherit;
-    pointer-events: none; 
+    pointer-events: none;
   }
-  
+
   /* Fallback background style */
   .no-device-orientation #background {
     background: inherit;
@@ -240,87 +226,77 @@ a:-webkit-any-link {
   transform: rotate(15deg);
 }
 
-
-
-
+.roboto-thin,
+.roboto-light,
+.roboto-regular,
+.roboto-medium,
+.roboto-bold,
+.roboto-black,
+.roboto-thin-italic,
+.roboto-light-italic,
+.roboto-regular-italic,
+.roboto-medium-italic,
+.roboto-bold-italic,
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
 
 .roboto-thin {
-  font-family: "Roboto", sans-serif;
   font-weight: 100;
-  font-style: normal;
 }
 
 .roboto-light {
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-style: normal;
 }
 
 .roboto-regular {
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-style: normal;
 }
 
 .roboto-medium {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-style: normal;
 }
 
 .roboto-bold {
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-style: normal;
 }
 
 .roboto-black {
-  font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-style: normal;
 }
 
 .roboto-thin-italic {
-  font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-style: italic;
 }
 
 .roboto-light-italic {
-  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
 
 .roboto-regular-italic {
-  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
 .roboto-medium-italic {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
 
 .roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
 .roboto-black-italic {
-  font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: italic;
 }
 
-
-
-
-
 /* Fallback background style */
 .no-device-orientation #background {
-  background:inherit;
+  background: radial-gradient(circle at {xPos}% {yPos}%, rgba(63, 94, 251, 1) 0%, rgba(70, 204, 252, 1) 18%, rgba(0, 0, 0, 1) 35%);
 }
