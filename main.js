@@ -1,13 +1,4 @@
-// Check if device orientation event is supported
-if ('DeviceOrientationEvent' in window) {
-  // Add event listener for device orientation
-  window.addEventListener('deviceorientation', handleOrientation);
-} else {
-  // Fallback mechanism if device orientation is not supported
-  console.log('Device orientation not supported.');
-  document.documentElement.classList.add('no-device-orientation'); // Agrega una clase al elemento raíz para indicar que no es compatible con la orientación del dispositivo
-  document.removeEventListener('deviceorientation', handleOrientation);
-}
+
 
 // Function to handle mouse movement event
 function handleMouseMove(e) {
@@ -27,9 +18,26 @@ function handleOrientation(event) {
   if (!background) return;
   const gamma = event.gamma;
   const beta = event.beta;
-
   const xPos = (gamma + 50) / 100 * window.innerWidth;
-  const yPos = (beta + -40) / 100 * window.innerHeight;
-
+  const yPos = (beta + -40) / 100 * window.innerHeight; 
   background.style.background = `radial-gradient(circle at ${xPos}px ${yPos}px, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%)`;
 }
+
+// Check if device orientation event is supported
+
+  // Add event listener for device orientation
+  window.addEventListener('deviceorientation', handleOrientation);
+
+  // Fallback mechanism if device orientation is not supported
+window.addEventListener("load", () => {
+  const background = document.getElementById('background');
+  if (!background) return; // Ensure the background element exists
+
+  // Remove the event listener for device orientation
+  window.removeEventListener('deviceorientation', handleOrientation);
+
+  // Set a default gradient as fallback
+  const defaultGradient = `radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%)`;
+  background.style.background = defaultGradient; // Set the default gradient
+});
+
