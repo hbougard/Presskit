@@ -5,6 +5,7 @@ if ('DeviceOrientationEvent' in window) {
 } else {
   // Fallback mechanism if device orientation is not supported
   console.log('Device orientation not supported.');
+  document.documentElement.classList.add('no-device-orientation'); // Agrega una clase al elemento raíz para indicar que no es compatible con la orientación del dispositivo
   // Remove mouse movement event listener
   document.removeEventListener('mousemove', handleMouseMove);
 }
