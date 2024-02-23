@@ -195,6 +195,17 @@ body {
   .back-button {
     display: none;
   }
+
+  #background {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
+  }
+  
+  /* Fallback background style */
+  .no-device-orientation #background {
+    background: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
+  }
 }
 
 /* Override overflow property for info.html to enable scrolling */
@@ -229,16 +240,7 @@ a:-webkit-any-link {
 
 
 
-/* Hue shift animation */
-@keyframes hueShift {
-  0% {
-    --color2: hsl(var(--hue-start), 100%, 60%);
-  }
-  100% {
-    --new-hue: calc(var(--hue-start) + 360);
-    --color2: hsl(var(--new-hue), 100%, 60%);
-  }
-}
+
 
 .roboto-thin {
   font-family: "Roboto", sans-serif;
@@ -324,11 +326,7 @@ a:-webkit-any-link {
   z-index: -1;
 }
 
-#background {
-  width: 100%;
-  height: 100vh;
-  background: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
-}
+
 
 /* Fallback background style */
 .no-device-orientation #background {
