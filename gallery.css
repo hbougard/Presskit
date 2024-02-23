@@ -54,7 +54,7 @@ a, a:link, a:visited, a:focus, a:hover, a:active  {
 
 @media only screen and (max-width: 768px) {
     .gallery {
-        height: 100vh;
+       
         grid-template-columns: repeat(2, 2fr);
     }
 
