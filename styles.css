@@ -10,17 +10,17 @@ body {
   overflow-x: hidden;
 }
   
-  
+ 
 
 
 .background {
+  pointer-events: none; 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-  flex-direction: none;
   
 }
 
@@ -196,15 +196,17 @@ body {
     display: none;
   }
 
-  #background {
+  .background
+   {
     width: 100%;
     height: 100vh;
-    background: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
+    background: inherit;
+    pointer-events: none; 
   }
   
   /* Fallback background style */
   .no-device-orientation #background {
-    background: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
+    background: inherit;
   }
 }
 
@@ -314,21 +316,11 @@ a:-webkit-any-link {
   font-style: italic;
 }
 
-/* CSS */
-#background {
-  
-  background-image: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+
 
 
 
 /* Fallback background style */
 .no-device-orientation #background {
-  background: radial-gradient(circle at 50% 50%, rgba(63,94,251,1) 0%, rgba(70,204,252,1) 18%, rgba(0,0,0,1) 35%);
+  background:inherit;
 }
