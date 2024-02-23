@@ -1,5 +1,5 @@
 body {
-    display:flex;
+    
     margin: 0;
     height: 100vh;
 }
@@ -53,7 +53,7 @@ a, a:link, a:visited, a:focus, a:hover, a:active  {
 
 @media only screen and (max-width: 768px) {
     .gallery {
-        height: auto;
+        height: 100vh;
         grid-template-columns: repeat(2, 2fr);
     }
 
